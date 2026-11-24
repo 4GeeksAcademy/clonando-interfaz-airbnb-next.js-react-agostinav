@@ -11,6 +11,7 @@ desde 375 px y se adaptará a escritorio a partir de 768 px.
 - Usar Next.js 16, React, TypeScript, Tailwind CSS y App Router.
 - Organizar las rutas en `/app`, los componentes en `/components` y las
    interfaces de datos en `/types`.
+- Mantener los datos simulados compartidos en `data/`.
 - Definir cada componente como `const`, con una única responsabilidad y en
    su propio archivo dentro de `/components`.
 - Mantener cada componente por debajo de aproximadamente 80 líneas de JSX y
@@ -80,7 +81,8 @@ desde su teléfono o computadora.
 
 ## Componentes reutilizables
 
-Los nombres y props siguientes son una propuesta; los componentes aún no existen.
+Los nombres y props siguientes describen los componentes implementados; el
+contrato detallado se mantiene también en `specs/airbnb/spec.md`.
 
 | Componente | Responsabilidad | Props principales | Uso |
 | --- | --- | --- | --- |

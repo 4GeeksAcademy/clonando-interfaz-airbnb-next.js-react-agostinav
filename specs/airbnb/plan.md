@@ -13,9 +13,10 @@ cambios existentes del usuario.
 Consultar la documentación instalada de Next.js 16 en
 `node_modules/next/dist/docs/`, especialmente la guía de rutas dinámicas,
 los parámetros dinámicos de página y el comportamiento con `cacheComponents` activado.
-La lectura de esa documentación quedó pendiente durante la planificación por
-una restricción de acceso. Resolverla antes de escribir la implementación y
-mantener la configuración existente salvo que se autorice un cambio.
+La guía de rutas dinámicas, los componentes de servidor/cliente y el modelo de
+caché se consultaron antes de implementar. Con `cacheComponents` activado,
+`params` es una promesa y el acceso dinámico sin `generateStaticParams` queda
+dentro de un límite `Suspense`; se mantiene la configuración existente.
 
 ## Estructura prevista
 
@@ -48,9 +49,10 @@ archivo dentro de `/components`.
 
 ## Datos y reutilización
 
-Definir las interfaces descritas en [spec.md](spec.md) y utilizar datos locales
-compartidos con identificadores válidos, categorías, precios variados y
-referencias de imagen placeholder. `ListingCard` y `ListingGrid` se reutilizan
+Definir las interfaces descritas en [spec.md](spec.md) y utilizar los datos
+simulados locales existentes en `data/`. Las rutas los importan directamente;
+el contenido de esa carpeta está excluido de esta auditoría y no se inspecciona.
+`ListingCard` y `ListingGrid` se reutilizan
 entre Home y catálogo; `LoadingState` entre Home y detalle. `Header` comparte
 la navegación, con buscador en Home.
 

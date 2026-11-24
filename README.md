@@ -1,15 +1,15 @@
 # Clonando la interfaz de Airbnb con Next.js y React
 
 Ejercicio de 4Geeks para reproducir tres vistas inspiradas en Airbnb con datos
-locales y diseño adaptable a dispositivos móviles y escritorio. El proyecto se
-encuentra en fase de desarrollo; las vistas todavía no están implementadas.
+simulados y diseño adaptable a dispositivos móviles y escritorio. Las vistas
+están implementadas y consumen los datos locales de `data/`.
 
 ## Tecnologías
 
 - Next.js 16 con App Router y React.
 - TypeScript y Tailwind CSS.
 
-## Rutas previstas
+## Rutas
 
 - `/`: inicio con búsqueda, categorías y alojamientos.
 - `/catalog`: catálogo con ordenación por precio y mapa placeholder.

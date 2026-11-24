@@ -15,8 +15,8 @@ alcance inicial. Tampoco se requiere funcionalidad de favoritos ni autenticació
 ## Arquitectura
 
 - Rutas: `app/page.tsx`, `app/catalog/page.tsx` y `app/rooms/[id]/page.tsx`.
-- Componentes en `/components`, interfaces en `/types` y datos locales
-  compartidos en `/data`.
+- Componentes en `/components`, interfaces en `/types` y datos simulados
+  compartidos en `data/`.
 - Cada componente funcional se define como `const`, tiene una responsabilidad
   y vive en su propio archivo; no debe superar aproximadamente 80 líneas de
   JSX y lógica.
@@ -75,6 +75,7 @@ alojamiento y categoría deben ser coherentes entre las vistas.
 
 | Componente | Responsabilidad | Props |
 | --- | --- | --- |
+| `Icon` | Renderizar iconos SVG propios desde nombres semánticos. | `name: string`, `className?: string` |
 | `Header` | Logo, navegación, buscador e iconos de usuario. | `searchValue?: string`, `onSearchChange?: (value: string) => void` |
 | `SearchBar` | Capturar la búsqueda. | `value: string`, `onChange: (value: string) => void` |
 | `CategoryFilters` | Seleccionar y resaltar la categoría. | `categories: Category[]`, `selectedCategory: string \| null`, `onSelect: (id: string \| null) => void` |
